@@ -13,15 +13,15 @@ module y_motor_base() {
     translate(v = [29,-21+50,0]) {
       difference() {
         union() {
-          translate(v = [-21+4.5,0,5]) cube(size = [9,31+.9,10], center=true);
+          translate(v = [-21+4.5,0,5]) cube(size = [9,31,10], center=true);
           translate(v = [-15.5,-15.5,0]) cylinder(h = 10, r=5.5, $fn=50);
-          translate(v = [-15.5,+15.5+.9,0]) cylinder(h = 10, r=5.5, $fn=50);
+          translate(v = [-15.5,+15.5,0]) cylinder(h = 10, r=5.5, $fn=50);
           translate([-21,7,0]) rotate([0,0,45]) cube([2, 2, 10]);
 
           //end stop
           /* translate(v = [-10.5,+15.5,0]) cylinder(h = 12, r=5.5, $fn=50); */
           translate([-12,0,0]) cube([7, 15, 10]);
-          translate([-16,15,0]) cube([11, 6.9, 10]); //top of endstop mount
+          translate([-16,15,0]) cube([11, 4.1, 10]); //top of endstop mount //here
           translate([-21+6,8,0]) cube([12-2, 5, 28]);
           translate([-21,8-5,0]) cube([8, 10, 28]);
           translate([-21+9.5-2,7,0]) rotate([0,0,45]) cube([2, 2, 28]);
@@ -84,6 +84,9 @@ module y_motor_holes() {
   translate([24.5-2,32,17]) rotate([0,45,0]) cube([2, 20, 2]);
 
   translate([23-2,32,29]) rotate([0,45,0]) cube([5, 20, 5]);
+
+  // cut off top of end-stop mount
+  translate([0,48.1,0]) cube([100,100,100]);
 }
 
 // Final part
