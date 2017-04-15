@@ -6,9 +6,8 @@
 // http://prusamendel.org
 
 
-module corner_base(){	
+module corner_base(){
  translate([-9,-11,-2]) cube([18,22,51]);
- 
 }
 
 module corner_holes(){
@@ -29,20 +28,19 @@ module corner_holes(){
 
   // Top smooth rod insert
   // Smooth rod place
-  translate([11,2.75,47]) rotate([0,90,90]) cylinder(h = 10, r=4.2, $fn=30); 
+  translate([11,2.75,47]) rotate([0,90,90]) cylinder(h = 10, r=4.2, $fn=30);
   // Ziptie
   translate([-5,6,41])  cube([30,3.5,2]);
-  
+
   // LM8UU keepout
   difference(){
     translate([11,12.5,46]) rotate([0,90,90]) cylinder(h = 270, r=8, $fn=30);
     translate([21,12.5,62]) rotate([0,90,90]) cube([20,20,30]);
-  } 
-  
+  }
+
   translate([21,12.5,57]) rotate([0,90,90]) cube([15.2,20,20]);
- 
+
  }
- 
 }
 
 module corner_fancy(){
@@ -58,32 +56,29 @@ module corner_fancy(){
 }
 
 module selective_infill(){
-    
-    translate([7,2,0.8])cube([0.2,33,5]); 
+
+    translate([7,2,0.8])cube([0.2,33,5]);
     translate([-7,2,0.8])cube([0.2,33,5]);
-    
+
     translate([ 7,16,5.8])cube([0.2,8,11]);
     translate([-7,16,5.8])cube([0.2,8,11]);
-    
-    translate([7,2,16.8])cube([0.2,33,2]); 
+
+    translate([7,2,16.8])cube([0.2,33,2]);
     translate([-7,2,16.8])cube([0.2,33,2]);
 }
-    
-    
+
+
 // Final part
 module corner(){
  // Rotate the part for better printing
-    translate([0,0,11]) rotate([-90,0,0]) 
-    {
-    difference(){
-        corner_base();
-        corner_holes();
-        corner_fancy();
-        translate([0,11,0]) rotate([90,0,0])selective_infill();
-        
+    translate([0,0,11]) rotate([-90,0,0]){
+      difference(){
+          corner_base();
+          corner_holes();
+          corner_fancy();
+          translate([0,11,0]) rotate([90,0,0])selective_infill();
+      }
     }
-    }
-
 }
 
 corner();
