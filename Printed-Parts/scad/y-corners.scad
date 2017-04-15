@@ -7,25 +7,25 @@
 
 
 module corner_base(){	
- translate([-9,-11,0])cube([18,22,49]);
+ translate([-9,-11,-2]) cube([18,22,51]);
  
 }
 
 module corner_holes(){
  translate([-11,-11,0]){
   // Bottom hole
-  translate([0,11,10]) rotate([0,90,0]) translate([0,0,-5]) cylinder(h = 270, r=4.4, $fn=30);
+  translate([0,11,8]) rotate([0,90,0]) translate([0,0,-5]) cylinder(h = 270, r=5.4, $fn=30);
   // Top hole
-  translate([0,11,30]) rotate([0,90,0]) translate([0,0,-5]) cylinder(h = 270, r=4.4, $fn=30);
+  translate([0,11,30]) rotate([0,90,0]) translate([0,0,-5]) cylinder(h = 270, r=5.4, $fn=30);
   // Middle hole
-  translate([11,0,20]) rotate([0,0,90]) rotate([0,90,0]) translate([0,0,-5]) cylinder(h = 270, r=5.4, $fn=30);
+  translate([11,0,19]) rotate([0,0,90]) rotate([0,90,0]) translate([0,0,-5]) cylinder(h = 270, r=5.4, $fn=30);
   // Bottom hole bridge
-  translate([0,8.8,10]) rotate([0,90,0]) translate([0,0,-5]) cylinder(h = 270, r=2.6, $fn=6);
+  translate([0,7.8,8]) rotate([0,90,0]) translate([0,0,-5]) cylinder(h = 270, r=2.6, $fn=6);
   // Top hole bridge
-  translate([0,8.8,30]) rotate([0,90,0]) translate([0,0,-5]) cylinder(h = 270, r=2.6, $fn=6);
+  translate([0,7.8,30]) rotate([0,90,0]) translate([0,0,-5]) cylinder(h = 270, r=2.6, $fn=6);
 
   // Washer hole
-  translate([11,-3,20]) rotate([0,0,90]) rotate([0,90,0]) translate([0,0,-5]) cylinder(h = 10, r=11, $fn=30);
+  translate([11,-3,19]) rotate([0,0,90]) rotate([0,90,0]) translate([0,0,-5]) cylinder(h = 10, r=11, $fn=30);
 
   // Top smooth rod insert
   // Smooth rod place
@@ -47,8 +47,8 @@ module corner_holes(){
 
 module corner_fancy(){
  // Side corner cutouts
-  translate([-8,-9,0]) rotate([0,0,-45-180]) translate([-15,0,-1]) cube([30,30,51]);
-  translate([8,-9,0]) rotate([0,0,45-180]) translate([-15,0,-1]) cube([30,30,51]);
+  translate([-8,-9,0]) rotate([0,0,-45-180]) translate([-15,0,-3]) cube([30,30,53]);
+  translate([8,-9,0]) rotate([0,0,45-180]) translate([-15,0,-3]) cube([30,30,53]);
  // Top corner cutouts
     translate([7,0,49]) rotate([0,45,0]) translate([-15,-15,0]) cube([30,30,30]);
     translate([-7,0,49]) rotate([0,-45,0]) translate([-15,-15,0]) cube([30,30,30]);
