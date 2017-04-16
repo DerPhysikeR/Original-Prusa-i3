@@ -8,8 +8,10 @@
 module main_body()
 {
 translate([-1, -1, -1 ]) cube([ 30, 27, 15 ]);
-translate([-10, 16, -1 ]) cube([ 50.5, 10, 15 ]);
-translate([-10, 23, -1 ]) cube([ 52, 3, 15 ]);
+difference() {
+  translate([-10, 16, -1 ]) cube([ 54, 12, 15 ]);
+  translate([44.7, 16, -1 ]) rotate([0,0,10]) cube([4, 20, 20 ]);
+  }
 }
 
 module belt_holders()
