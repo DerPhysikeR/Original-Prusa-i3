@@ -26,7 +26,7 @@ module y_motor_base() {
           translate([-21,8-5,0]) cube([8, 10, 29]);
           translate([-21+9.5-2,7,0]) rotate([0,0,45]) cube([2, 2, 29]);
           // Joins motor holder and rod plate
-          translate(v = [-29,-21,0]) cube(size = [14,30,10]);
+          translate(v = [-31,-21,0]) cube(size = [16,30,10]);
         }
           //selective infill
           translate([-14.5,5,0.3]) cube([0.1,5.5,27]);
@@ -39,8 +39,8 @@ module y_motor_base() {
   }
   // Front holding part
   hull() {
-    translate(v = [0,8,0]) cylinder(h = 10, r=9, $fn=80);
-    translate(v = [0,29,0]) cylinder(h = 10, r=9, $fn=80);
+    translate(v = [-2,8,0]) cylinder(h = 10, r=9, $fn=80);
+    translate(v = [-2,29,0]) cylinder(h = 10, r=9, $fn=80);
   }
 }
 
@@ -54,8 +54,8 @@ module y_motor_holes() {
     translate(v = [-15.5,+15.5,7]) cylinder(h = 25, r=3.5, $fn=30);
   }
 
-  translate(v = [0,8,-1]) cylinder(h = 12, r=5.2, $fn=50);
-  translate(v = [0,29,-1]) cylinder(h = 12, r=5.2, $fn=50);
+  translate(v = [-2,8,-1]) cylinder(h = 12, r=5.2, $fn=50);
+  translate(v = [-2,29,-1]) cylinder(h = 12, r=5.2, $fn=50);
 
   //endstop
   translate([25,29,0])  cylinder(h = 29, r=8, $fn=20);
