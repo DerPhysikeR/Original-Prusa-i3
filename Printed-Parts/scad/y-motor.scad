@@ -22,9 +22,9 @@ module y_motor_base() {
           /* translate(v = [-10.5,+15.5,0]) cylinder(h = 12, r=5.5, $fn=50); */
           translate([-12,0,0]) cube([7, 15, 10]);
           translate([-16,15,0]) cube([11, 4.1, 10]); //top of endstop mount //here
-          translate([-21+6,8,0]) cube([12-2, 5, 28]);
-          translate([-21,8-5,0]) cube([8, 10, 28]);
-          translate([-21+9.5-2,7,0]) rotate([0,0,45]) cube([2, 2, 28]);
+          translate([-21+6,8,0]) cube([12-2, 5, 29]);
+          translate([-21,8-5,0]) cube([8, 10, 29]);
+          translate([-21+9.5-2,7,0]) rotate([0,0,45]) cube([2, 2, 29]);
           // Joins motor holder and rod plate
           translate(v = [-29,-21,0]) cube(size = [14,30,10]);
         }
@@ -62,7 +62,7 @@ module y_motor_holes() {
 
   /* M3 core diameter~=2.4mm */
   /* hole distance from front edge=3.1 */
-  fed = 3;
+  fed = 2.5;
   side_dist = -3.3 + 10;
   height_difference = 5.9;
   translate([24-fed,45+height_difference,side_dist]) rotate([90,0,0]) cylinder(h = 10, r=1.2, $fn=20);
@@ -75,15 +75,15 @@ module y_motor_holes() {
   /* side distance for first hole = 3.7 */
 
   // endstop corner cutout
-  translate([-10,30,28]) rotate([0,45,0]) cube([15, 19, 15]);
+  translate([-10,30,28]) rotate([0,45,0]) cube([15, 19, 20]);
   translate([-1,41,10])  cube([15, 5, 19]);
   translate([27,33,0]) rotate([0,0,45]) cube([5, 5, 28]);
   translate([7,28,10.01]) rotate([0,0,45]) cube([5, 5, 28]);
 
-  translate([20,32,0]) rotate([0,30,0]) cube([8, 20, 18]);
-  translate([24.5-2,32,17]) rotate([0,45,0]) cube([2, 20, 2]);
+  translate([22,32,0]) rotate([0,30,0]) cube([8, 20, 18]);
+  translate([24.5-2,32,18.5]) rotate([0,45,0]) cube([3, 20, 3]);
 
-  translate([23-2,32,29]) rotate([0,45,0]) cube([5, 20, 5]);
+  translate([23,32,29]) rotate([0,45,0]) cube([5, 20, 5]);
 
   // cut off top of end-stop mount
   translate([0,48.1,0]) cube([100,100,100]);
