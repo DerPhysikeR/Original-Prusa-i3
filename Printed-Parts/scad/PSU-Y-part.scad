@@ -34,7 +34,7 @@ module cutout()
     translate([ 22, -16 , -1 ]) cylinder( h = 10, r = 3.2, $fn=6);  // M3 nut body B
     translate([ 22, -16 , -1 ]) cylinder( h = 14, r1 = 3.2, r1 = 5, $fn=6);  // M3 nut hole B fillet
 
-    translate([ -13, 14 , 14 ]) rotate([90,0,0]) cylinder( h = 25, r = 5.2, $fn=30);  // threaded rod
+    translate([ -13, 14 , 13 ]) rotate([90,0,0]) cylinder( h = 25, r = 5.2, $fn=30);  // threaded rod
     
     translate([ -13, 0 , 14 ]) rotate([90,0,0]) cylinder( h = 4, r = 13, $fn=30);  // washer
     translate([ -29, -7 , 14 ])  cube([ 29, 7, 18 ]);  // washer upper cut
