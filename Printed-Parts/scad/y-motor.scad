@@ -49,6 +49,8 @@ module y_motor_holes() {
     // Screw head holes
     translate(v = [-15.5,-15.5,-1]) cylinder(h = 10, r=1.8, $fn=20);
     translate(v = [-15.5,+15.5,-1]) cylinder(h = 10, r=1.8, $fn=20);
+    // Clearance for motor neck
+    translate(v = [0,0,-1]) cylinder(h = 6, d1=24.2, d2=18.2, $fn=50);
     // Screw holes
     translate(v = [-15.5,-15.5,7]) cylinder(h = 7, r=3.5, $fn=30);
     translate(v = [-15.5,+15.5,7]) cylinder(h = 25, r=3.5, $fn=30);
