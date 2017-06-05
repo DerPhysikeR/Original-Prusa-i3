@@ -29,8 +29,8 @@ module x_end_cutout() {
                     translate([3,0,2]) cube([2,18.3,27]);
                     cube([3,16.1,27]);
                     /* 13 is the real height of the endstop, but to make it printable a second cube with 20 is used */
-                    translate([-4.9,0,7]) cube([7.9,10.1,13]);
-                    translate([-4.9,0,7]) cube([7.9,10.1,20]);
+                    translate([-5.9,0,7]) cube([7.9,10.1,13]);
+                    translate([-5.9,0,7]) cube([7.9,10.1,20]);
                     /* translate([-20,0,23]) rotate([0, 90, 0]) cylinder(h=30, d=2.8, $fn=50); */
                     translate([-20,3,23]) rotate([0, 90, 0]) cylinder(h=30, d=3, $fn=10);
                     }
