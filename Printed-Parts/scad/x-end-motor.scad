@@ -32,7 +32,7 @@ module x_end_cutout() {
                     translate([-4.9,0,7]) cube([7.9,10.1,13]);
                     translate([-4.9,0,7]) cube([7.9,10.1,20]);
                     /* translate([-20,0,23]) rotate([0, 90, 0]) cylinder(h=30, d=2.8, $fn=50); */
-                    translate([-20,3,23]) rotate([0, 90, 0]) cylinder(h=30, d=2.8, $fn=10);
+                    translate([-20,3,23]) rotate([0, 90, 0]) cylinder(h=30, d=3, $fn=10);
                     }
           }
 
