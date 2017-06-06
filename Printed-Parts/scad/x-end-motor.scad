@@ -23,6 +23,15 @@ module x_end_motor_endstop_base(){
         }
 }
 
+module support() {
+     translate([-23.5,-28.5,49]){
+          translate([13,0,0]) {
+               translate([-.8,0,0]) cube([.8,16.1,5]);
+          }
+     }
+
+}
+
 module x_end_cutout() {
      translate([-23.5,-28.5,49]){
                translate([13,0,0]) {
@@ -163,7 +172,10 @@ module x_end_motor(){
  }
 }
 
-x_end_motor();
+union() {
+  x_end_motor();
+  support();
+}
 
 
 
