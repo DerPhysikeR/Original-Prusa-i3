@@ -76,8 +76,8 @@ module x_carriage_base(){
     // Belt Insert R
     difference(){
     union(){
-    translate([2,27,0]) cube([10,6,15]);
-    translate([2,27-2.3-4.5,0]) cube([10,4.5,15]);
+    translate([2,27.1,0]) cube([10,5.9,15]);
+    translate([2,27-2.3-4.5,0]) cube([10,4.4,15]);
     translate([-0.5,27,0]) cube([8,7,2]);
     }
     translate([-3,25,5.5]) rotate([0,0,-40]) cube([5,5.5,10]);
@@ -89,8 +89,8 @@ difference(){
      translate([-33,3,00]){
      scale([-1,1,1])
          {
-         translate([0,27,0]) cube([12.5,3,15]);
-         translate([2,27-7.5-2.3,0]) cube([12.5,7.5,15]);
+         translate([0,27.1,0]) cube([12.5,2.9,15]);
+         translate([2,27-7.5-2.3,0]) cube([12.5,7.4,15]);
          translate([-0.5,27,0]) cube([8,7,2]);
          }
      }
