@@ -242,19 +242,19 @@ union(){
     translate([0,21,0]) rotate([0,90,0]) cylinder(r=5.2, h=5.5, $fn=25);
     
     //selective infill
-    translate([-36.5,21.25,1.5]) cube([0.1,4.5,13.3]);      
-    translate([-38.6,21,1.5]) cube([0.1,6,13.3]);      
-    translate([-41,21,1.5]) cube([0.1,6,13.3]);      
+    /* translate([-36.5,21.25,1.5]) cube([0.1,4.5,13.3]);       */
+    /* translate([-38.6,21,1.5]) cube([0.1,6,13.3]);       */
+    /* translate([-41,21,1.5]) cube([0.1,6,13.3]);       */
 
-    translate([3.5,21,6]) cube([0.1,2,8.8]);      
-    translate([5,21,6]) cube([0.1,3,8.8]);      
-    translate([6.8,21,1.5]) cube([0.1,3,13.3]);      
-    translate([8.5,21,5]) cube([0.1,3,9.8]);      
+    /* translate([3.5,21,6]) cube([0.1,2,8.8]);       */
+    /* translate([5,21,6]) cube([0.1,3,8.8]);       */
+    /* translate([6.8,21,1.5]) cube([0.1,3,13.3]);       */
+    /* translate([8.5,21,5]) cube([0.1,3,9.8]);       */
 
-    translate([3.5,21,5.5]) cube([0.5,2,9]);  
-    translate([5,21,5.5]) cube([0.5,2,9]);  
-    translate([6.5,21,5.5]) cube([0.5,2,9]);  
-    translate([8,21,5]) cube([0.5,2,9]);  
+    /* translate([3.5,21,5.5]) cube([0.5,2,9]);   */
+    /* translate([5,21,5.5]) cube([0.5,2,9]);   */
+    /* translate([6.5,21,5.5]) cube([0.5,2,9]);   */
+    /* translate([8,21,5]) cube([0.5,2,9]);   */
     
     // filament holder
     translate([-18.5,-10.5,12]) rotate([-8,0,0])cylinder(r=1.52, h=40, $fn=10); 
